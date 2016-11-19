@@ -19,7 +19,7 @@ test('detect that sketchtool is not installed', t => {
 })
 
 test('get version', async t => {
-  t.is(typeof await sketchtool.version, 'number')
+  t.is(typeof await sketchtool.version(), 'number')
 })
 
 test('dump a document', async t => {

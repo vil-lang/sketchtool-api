@@ -32,7 +32,7 @@ export default {
     return fs.existsSync(this.bin)
   },
 
-  get version() {
+  version() {
     return run('--version')
       .then(out => Number(out.match(/(\d+)/)[0]))
   },
