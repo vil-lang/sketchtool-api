@@ -29,6 +29,6 @@ test('dump a document', async t => {
   t.truthy(doc.pages)
 })
 
-test('explode document does not exist', t => {
+test('explode if document does not exist', t => {
   t.throws(sketchtool.dump('void'))
 })
