@@ -20,6 +20,12 @@
     "test",
     "check-coverage"
   ],
+  "keywords": [
+    "sketch",
+    "sketchtool",
+    "api",
+    "dump"
+  ],
   "ava": {
     "require": [
       "babel-register"
@@ -30,12 +36,9 @@
       "es2015"
     ]
   },
-  "keywords": [
-    "sketch",
-    "sketchtool",
-    "api",
-    "dump"
-  ],
+  "eslintConfig": {
+    "extends": "ngryman"
+  },
   "dependencies": {
     "mem": "^1.1.0"
   },
