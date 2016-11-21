@@ -45,9 +45,11 @@
   "babel": {
     "env": {
       "development": {
+        "presets": [
+          "node5"
+        ],
         "plugins": [
-          "istanbul",
-          "transform-es2015-modules-commonjs"
+          "istanbul"
         ]
       }
     }
@@ -69,6 +71,7 @@
     "mem": "^1.1.0"
   },
   "devDependencies": {
+    "babel-preset-node5": "^11.1.0",
     "meta-dev": "^0.3.6",
     "pre-commit": "^1.1.3"
   }
