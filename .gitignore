@@ -2,6 +2,7 @@
 .nyc_output
 .todo
 coverage/
+dist/
 
 # node
 node_modules/
