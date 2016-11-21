@@ -1,5 +1,5 @@
 import test from 'ava'
-import sketchtool from './'
+import sketchtool from './index'
 
 test.beforeEach(t => {
   sketchtool.path = 'fixtures/sketchtool'
