@@ -38,4 +38,4 @@ const doc = await sketchtool.dump('my-awesome-design.sketch')
 
 ## License
 
-MIT © [Nicolas Gryman](http://ngryman.sh)
+MIT © [Nicolas Gryman](https://ngryman.sh)

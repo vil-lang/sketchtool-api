@@ -1,6 +1,0 @@
-{
-  "extends": "ngryman",
-  "rules": {
-    "no-sync": 0
-  }
-}

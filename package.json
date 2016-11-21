@@ -5,16 +5,28 @@
   "author": "Nicolas Gryman <ngryman@gmail.com> (http://ngryman.sh/)",
   "license": "MIT",
   "repository": "ngryman/sketchtool-api",
-  "main": "index.js",
+  "main": "dist/tree-crawl.node.js",
+  "browser": "dist/tree-crawl.browser.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
+  "engines": {
+    "node": ">=5"
+  },
   "files": [
-    "index.js"
+    "index.js",
+    "dist/"
   ],
   "scripts": {
-    "test": "eslint {,lib/,test/}*.js && nyc ava",
-    "dev": "npm run test -- --watch",
-    "coverage": "nyc report --reporter=text-lcov | codecov",
-    "see-coverage": "nyc report --reporter=html && open coverage/index.html",
-    "check-coverage": "nyc check-coverage --lines 95 --functions 95 --branches 95"
+    "lint": "meta lint",
+    "pretest": "npm run lint -s",
+    "test": "meta test",
+    "dev": "meta dev",
+    "coverage": "meta coverage",
+    "see-coverage": "meta see-coverage",
+    "check-coverage": "meta check-coverage",
+    "prebuild": "npm run lint -s",
+    "build": "meta build",
+    "prepublish": "npm run build -s"
   },
   "precommit": [
     "test",
@@ -32,22 +44,26 @@
     ]
   },
   "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "env": {
+      "development": {
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ],
+        "sourceMaps": "inline"
+      }
+    }
   },
   "eslintConfig": {
-    "extends": "ngryman"
+    "extends": "ngryman",
+    "rules": {
+      "no-sync": 0
+    }
   },
   "dependencies": {
     "mem": "^1.1.0"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
-    "codecov.io": "^0.1.6",
-    "eslint": "^3.1.1",
-    "eslint-config-ngryman": "^1.4.0",
-    "nyc": "^9.0.1",
+    "meta-dev": "^0.3.5",
     "pre-commit": "^1.1.3"
   }
 }
