@@ -44,7 +44,7 @@
   },
   "babel": {
     "env": {
-      "development": {
+      "test": {
         "presets": [
           "node5"
         ],
@@ -71,8 +71,7 @@
     "mem": "^1.1.0"
   },
   "devDependencies": {
-    "babel-preset-node5": "^11.1.0",
-    "meta-dev": "^0.3.6",
+    "meta-dev": "^0.4.0",
     "pre-commit": "^1.1.3"
   }
 }
